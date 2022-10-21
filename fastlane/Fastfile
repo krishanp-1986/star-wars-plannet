@@ -1,0 +1,38 @@
+require File.expand_path('parameters/project_params.rb', __dir__)
+
+DERIVED_DATA_PATH = PROJECT_PARAMS[:DERIVED_DATA_PATH]
+
+
+import('Test')
+import('SwiftLint')
+
+default_platform(:ios)
+
+# --- Before all, prepare
+
+before_all do |lane, options|
+    # - Install dependencies if needed
+    clear_derived_data(derived_data_path: DERIVED_DATA_PATH)
+    prepare
+end
+
+
+desc 'prepares the environment'
+private_lane :prepare do |options|
+    defaults = {
+        derived_data_path: DERIVED_DATA_PATH
+    }.freeze
+    options = defaults.merge(options)
+
+     # Update/Install Pods
+     pods_update
+
+    #run_swiftlint
+    run_swiftlint
+end
+
+private_lane :pods_update do
+  cocoapods(use_bundle_exec: true, error_callback: lambda { |_result|
+    cocoapods(use_bundle_exec: true, repo_update: true)
+  })
+end
