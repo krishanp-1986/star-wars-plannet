@@ -26,6 +26,6 @@ jobs:
       - name: fastlane swiftlint
         uses: maierj/fastlane-action@v1.4.0
         with:
-          lane: swiftlint
+          lane: run_swiftlint
           skip-tracking: false
 
