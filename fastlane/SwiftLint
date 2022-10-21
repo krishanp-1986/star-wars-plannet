@@ -11,8 +11,12 @@ lane :run_swiftlint do |options|
         executable = sh "which swiftlint|tr -d '\n'"
         puts "Found 'swiftlint' at: "+executable
         defaults = {
-            executable: executable,
-            output_file: "#{REPORTS_FOLDER}/swiftlint.result"
+            mode: :lint,
+            executable: "Pods/SwiftLint/swiftlint",
+            reporter: "html",
+            output_file: "fastlane/swiftlint-results.html",
+            config_file: '.swiftlint.yml',
+            ignore_exit_status: true
         }.freeze
 
         swiftlint(defaults.merge(options))
