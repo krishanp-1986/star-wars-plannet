@@ -1,0 +1,28 @@
+PODS:
+  - Nimble (10.0.0)
+  - Quick (5.0.1)
+  - SnapKit (5.6.0)
+  - SwiftLint (0.49.1)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - SnapKit
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+    - SnapKit
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
+
+PODFILE CHECKSUM: e3903574a9dbf7207570e5207ac41686c058ea81
+
+COCOAPODS: 1.11.3
