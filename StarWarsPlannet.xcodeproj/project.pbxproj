@@ -10,6 +10,10 @@
 		1F2C1624C9A67C49A181FE2B /* Pods_StarWarsPlannetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A341799F6274BC4408135DCA /* Pods_StarWarsPlannetTests.framework */; };
 		856FEAA3B96F2E5AB6DA35B1 /* Pods_StarWarsPlannet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCF88F2B38D805AA26A7A30 /* Pods_StarWarsPlannet.framework */; };
 		AE9B6BCA8E95850DAC5460B5 /* Pods_StarWarsPlannet_StarWarsPlannetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D781A0CF6F6B70F2E4BA08 /* Pods_StarWarsPlannet_StarWarsPlannetUITests.framework */; };
+		D92E8F542903BD20001C1504 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E8F532903BD20001C1504 /* Reusable.swift */; };
+		D92E8F562903BD90001C1504 /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E8F552903BD90001C1504 /* CellConfigurable.swift */; };
+		D92E8F582903BE0C001C1504 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E8F572903BE0C001C1504 /* TableViewAdapter.swift */; };
+		D92E8F5A2903E511001C1504 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E8F592903E511001C1504 /* Observable.swift */; };
 		D93FA2112902D58700A91B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2102902D58700A91B38 /* AppDelegate.swift */; };
 		D93FA2132902D58700A91B38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2122902D58700A91B38 /* SceneDelegate.swift */; };
 		D93FA21A2902D58800A91B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93FA2192902D58800A91B38 /* Assets.xcassets */; };
@@ -22,6 +26,20 @@
 		D93FA2492902D95400A91B38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2482902D95400A91B38 /* BaseViewController.swift */; };
 		D93FA24B2902DA0B00A91B38 /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA24A2902DA0B00A91B38 /* PlanetsViewController.swift */; };
 		D93FA24D2902DA3300A91B38 /* PlanetsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA24C2902DA3300A91B38 /* PlanetsDataProvider.swift */; };
+		D93FA2512902F6A000A91B38 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2502902F6A000A91B38 /* DataProvider.swift */; };
+		D93FA2532902F81A00A91B38 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2522902F81A00A91B38 /* NetworkAgent.swift */; };
+		D93FA2552902F94400A91B38 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2542902F94400A91B38 /* EndPoint.swift */; };
+		D93FA2582903056E00A91B38 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2572903056E00A91B38 /* UIViewController+Rx.swift */; };
+		D93FA25B2903094600A91B38 /* PlanetsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA25A2903094600A91B38 /* PlanetsUseCase.swift */; };
+		D93FA25D29030FD900A91B38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA25C29030FD900A91B38 /* Constants.swift */; };
+		D93FA260290314C200A91B38 /* PlanetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA25F290314C200A91B38 /* PlanetsResponse.swift */; };
+		D93FA2632903182200A91B38 /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */; };
+		D9FCB34D290444D200B87BA8 /* MockNetworkingAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB34C290444D200B87BA8 /* MockNetworkingAgent.swift */; };
+		D9FCB3502904456600B87BA8 /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB34F2904456600B87BA8 /* JsonUtils.swift */; };
+		D9FCB3522904463A00B87BA8 /* MockResponse in Resources */ = {isa = PBXBuildFile; fileRef = D9FCB3512904463A00B87BA8 /* MockResponse */; };
+		D9FCB35429044B0F00B87BA8 /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB35329044B0F00B87BA8 /* UITableView+Rx.swift */; };
+		D9FCB35729045D0B00B87BA8 /* PlanetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB35629045D0B00B87BA8 /* PlanetDetail.swift */; };
+		D9FCB35929045DEE00B87BA8 /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB35829045DEE00B87BA8 /* PlanetDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +66,10 @@
 		93D781A0CF6F6B70F2E4BA08 /* Pods_StarWarsPlannet_StarWarsPlannetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsPlannet_StarWarsPlannetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A341799F6274BC4408135DCA /* Pods_StarWarsPlannetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsPlannetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCF88F2B38D805AA26A7A30 /* Pods_StarWarsPlannet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsPlannet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92E8F532903BD20001C1504 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		D92E8F552903BD90001C1504 /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
+		D92E8F572903BE0C001C1504 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		D92E8F592903E511001C1504 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		D93FA20D2902D58700A91B38 /* StarWarsPlannet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsPlannet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93FA2102902D58700A91B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D93FA2122902D58700A91B38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +86,20 @@
 		D93FA2482902D95400A91B38 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D93FA24A2902DA0B00A91B38 /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
 		D93FA24C2902DA3300A91B38 /* PlanetsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsDataProvider.swift; sourceTree = "<group>"; };
+		D93FA2502902F6A000A91B38 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		D93FA2522902F81A00A91B38 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
+		D93FA2542902F94400A91B38 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		D93FA2572903056E00A91B38 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		D93FA25A2903094600A91B38 /* PlanetsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUseCase.swift; sourceTree = "<group>"; };
+		D93FA25C29030FD900A91B38 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D93FA25F290314C200A91B38 /* PlanetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsResponse.swift; sourceTree = "<group>"; };
+		D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
+		D9FCB34C290444D200B87BA8 /* MockNetworkingAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingAgent.swift; sourceTree = "<group>"; };
+		D9FCB34F2904456600B87BA8 /* JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtils.swift; sourceTree = "<group>"; };
+		D9FCB3512904463A00B87BA8 /* MockResponse */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MockResponse; sourceTree = "<group>"; };
+		D9FCB35329044B0F00B87BA8 /* UITableView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
+		D9FCB35629045D0B00B87BA8 /* PlanetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetail.swift; sourceTree = "<group>"; };
+		D9FCB35829045DEE00B87BA8 /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
 		DA3532D430137AA4D5BE4680 /* Pods-StarWarsPlannetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannetTests.release.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannetTests/Pods-StarWarsPlannetTests.release.xcconfig"; sourceTree = "<group>"; };
 		F37F208B4206BCBABC0CCA55 /* Pods-StarWarsPlannet-StarWarsPlannetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannet-StarWarsPlannetUITests.release.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannet-StarWarsPlannetUITests/Pods-StarWarsPlannet-StarWarsPlannetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA7751975E02ABC508E7AD7B /* Pods-StarWarsPlannet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannet.release.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannet/Pods-StarWarsPlannet.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +168,9 @@
 		D93FA20F2902D58700A91B38 /* StarWarsPlannet */ = {
 			isa = PBXGroup;
 			children = (
+				D9FCB34E2904455900B87BA8 /* Utils */,
+				D93FA2562903055A00A91B38 /* Extension */,
+				D93FA24F2902F69300A91B38 /* Service */,
 				D93FA2452902D86A00A91B38 /* Base */,
 				D93FA2412902D82000A91B38 /* Features */,
 				D93FA2102902D58700A91B38 /* AppDelegate.swift */,
@@ -163,6 +202,7 @@
 		D93FA2412902D82000A91B38 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D9FCB35529045CF900B87BA8 /* PlanetDetail */,
 				D93FA2422902D82E00A91B38 /* Planets */,
 			);
 			path = Features;
@@ -171,6 +211,9 @@
 		D93FA2422902D82E00A91B38 /* Planets */ = {
 			isa = PBXGroup;
 			children = (
+				D93FA261290317FD00A91B38 /* Views */,
+				D93FA25E290314B200A91B38 /* Model */,
+				D93FA2592903092A00A91B38 /* UseCase */,
 				D93FA2432902D84100A91B38 /* Planets.swift */,
 				D93FA24A2902DA0B00A91B38 /* PlanetsViewController.swift */,
 				D93FA24C2902DA3300A91B38 /* PlanetsDataProvider.swift */,
@@ -183,8 +226,75 @@
 			children = (
 				D93FA2462902D88A00A91B38 /* BindableType.swift */,
 				D93FA2482902D95400A91B38 /* BaseViewController.swift */,
+				D93FA25C29030FD900A91B38 /* Constants.swift */,
+				D92E8F532903BD20001C1504 /* Reusable.swift */,
+				D92E8F552903BD90001C1504 /* CellConfigurable.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D93FA24F2902F69300A91B38 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D9FCB3512904463A00B87BA8 /* MockResponse */,
+				D93FA2502902F6A000A91B38 /* DataProvider.swift */,
+				D93FA2522902F81A00A91B38 /* NetworkAgent.swift */,
+				D93FA2542902F94400A91B38 /* EndPoint.swift */,
+				D9FCB34C290444D200B87BA8 /* MockNetworkingAgent.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D93FA2562903055A00A91B38 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA2572903056E00A91B38 /* UIViewController+Rx.swift */,
+				D92E8F592903E511001C1504 /* Observable.swift */,
+				D9FCB35329044B0F00B87BA8 /* UITableView+Rx.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D93FA2592903092A00A91B38 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA25A2903094600A91B38 /* PlanetsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		D93FA25E290314B200A91B38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA25F290314C200A91B38 /* PlanetsResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D93FA261290317FD00A91B38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D92E8F572903BE0C001C1504 /* TableViewAdapter.swift */,
+				D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9FCB34E2904455900B87BA8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9FCB34F2904456600B87BA8 /* JsonUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D9FCB35529045CF900B87BA8 /* PlanetDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D9FCB35629045D0B00B87BA8 /* PlanetDetail.swift */,
+				D9FCB35829045DEE00B87BA8 /* PlanetDetailViewController.swift */,
+			);
+			path = PlanetDetail;
 			sourceTree = "<group>";
 		};
 		E15B3C5E07DF897DC21A9A11 /* Pods */ = {
@@ -311,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FCB3522904463A00B87BA8 /* MockResponse in Resources */,
 				D93FA21D2902D58800A91B38 /* LaunchScreen.storyboard in Resources */,
 				D93FA21A2902D58800A91B38 /* Assets.xcassets in Resources */,
 			);
@@ -475,13 +586,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92E8F5A2903E511001C1504 /* Observable.swift in Sources */,
+				D9FCB34D290444D200B87BA8 /* MockNetworkingAgent.swift in Sources */,
+				D93FA260290314C200A91B38 /* PlanetsResponse.swift in Sources */,
+				D9FCB3502904456600B87BA8 /* JsonUtils.swift in Sources */,
 				D93FA24D2902DA3300A91B38 /* PlanetsDataProvider.swift in Sources */,
 				D93FA2112902D58700A91B38 /* AppDelegate.swift in Sources */,
+				D93FA2552902F94400A91B38 /* EndPoint.swift in Sources */,
+				D93FA2512902F6A000A91B38 /* DataProvider.swift in Sources */,
+				D92E8F582903BE0C001C1504 /* TableViewAdapter.swift in Sources */,
 				D93FA24B2902DA0B00A91B38 /* PlanetsViewController.swift in Sources */,
+				D9FCB35929045DEE00B87BA8 /* PlanetDetailViewController.swift in Sources */,
 				D93FA2132902D58700A91B38 /* SceneDelegate.swift in Sources */,
 				D93FA2442902D84100A91B38 /* Planets.swift in Sources */,
+				D93FA25D29030FD900A91B38 /* Constants.swift in Sources */,
+				D9FCB35429044B0F00B87BA8 /* UITableView+Rx.swift in Sources */,
 				D93FA2472902D88A00A91B38 /* BindableType.swift in Sources */,
 				D93FA2492902D95400A91B38 /* BaseViewController.swift in Sources */,
+				D93FA2582903056E00A91B38 /* UIViewController+Rx.swift in Sources */,
+				D9FCB35729045D0B00B87BA8 /* PlanetDetail.swift in Sources */,
+				D92E8F542903BD20001C1504 /* Reusable.swift in Sources */,
+				D93FA2532902F81A00A91B38 /* NetworkAgent.swift in Sources */,
+				D93FA25B2903094600A91B38 /* PlanetsUseCase.swift in Sources */,
+				D92E8F562903BD90001C1504 /* CellConfigurable.swift in Sources */,
+				D93FA2632903182200A91B38 /* PlanetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

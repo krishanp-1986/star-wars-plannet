@@ -10,7 +10,14 @@ import UIKit
 
 struct Planets {
     static func build() -> UIViewController {
+        let navigationController = UINavigationController()
         let planetsVC = PlanetsViewController()
-        return planetsVC
+        let planetsViewModel = PlanentsViewModel()
+        planetsViewModel.onPlanetDetail = {  planet in
+            navigationController.present(PlanetDetail.build(name: planet.name, orbitalPeriod: planet.orbitalPeriod, gravity: planet.gravity), animated:true)
+        }
+        planetsVC.bindViewModel(planetsViewModel)
+        navigationController.viewControllers = [planetsVC]
+        return navigationController
     }
 }
