@@ -16,7 +16,7 @@ lane :run_all_but_deploy do
 end
 
 desc 'run all tests'
-private_lane :run_all_tests do |options|
+lane :run_all_tests do |options|
   defaults = {
     workspace: WORKSPACE,
     scheme: APP_SCHEME,

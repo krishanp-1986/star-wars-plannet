@@ -11,6 +11,7 @@ end
 def testingPods
   pod 'Nimble'
   pod 'Quick'
+  pod 'RxTest'
 end
 
 target 'StarWarsPlannet' do
@@ -23,10 +24,6 @@ target 'StarWarsPlannet' do
   target 'StarWarsPlannetTests' do
     inherit! :search_paths
     testingPods
-  end
-
-  target 'StarWarsPlannetUITests' do
-    # Pods for testing
   end
 
 end

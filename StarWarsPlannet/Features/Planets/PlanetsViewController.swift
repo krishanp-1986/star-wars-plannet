@@ -48,7 +48,7 @@ class PlanetsViewController: BaseViewController<PlanetsDataProvider> {
     
     private func reloadTableView() {
         self.planetsTableView.reloadData()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
             if self?.planetsTableView.isLastCellVisible == true {
                 self?.tableViewUpdated.accept(())
             }

@@ -5,6 +5,7 @@ DERIVED_DATA_PATH = PROJECT_PARAMS[:DERIVED_DATA_PATH]
 
 import('Test')
 import('SwiftLint')
+import('Build')
 
 default_platform(:ios)
 

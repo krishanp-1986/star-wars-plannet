@@ -16,7 +16,8 @@ struct MockNetworkAgent: DataProvider {
                 return Disposables.create {}
             }
             
-            guard let data = JsonUtils.convertJsonIntoDecodable(T.self, fileName: path) else {
+            let filePath = request.url?.query ?? path
+            guard let data = JsonUtils.convertJsonIntoDecodable(T.self, fileName: filePath) else {
                 single(.failure(ServiceError.inValidData))
                 return Disposables.create {}
             }

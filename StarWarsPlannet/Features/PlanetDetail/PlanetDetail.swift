@@ -10,6 +10,6 @@ import UIKit
 
 struct PlanetDetail {
     static func build(name: String, orbitalPeriod: String, gravity: String) -> UIViewController {
-       PlanetDetailViewController(with: name, orbitalPeriod: orbitalPeriod, gravity: gravity)
+        PlanetDetailViewController(with: name, orbitalPeriod: orbitalPeriod, gravity: gravity)
     }
 }

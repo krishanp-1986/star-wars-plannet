@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 protocol PlanetsDataProvider {
-    var nextUrl: String? { get }
+    var nextUrl: String? { get set }
     var onPlanetDetail: ((Planet) -> Void)? { get set }
     init(with useCase: PlanetsService)
     func bind(input: PlanentsViewModel.Input) -> Observable<PlanentsViewModel.State?>
@@ -19,12 +19,13 @@ protocol PlanetsDataProvider {
 final class PlanentsViewModel: PlanetsDataProvider {
     var nextUrl: String?
     var onPlanetDetail: ((Planet) -> Void)?
+    let state: PublishRelay<State?> = .init()
     
     struct Input {
         var didLoad: Observable<Void>
         var willDisplayLastCell: Observable<Void>
     }
-    init(with useCase: PlanetsService = StarWarsPlanetsService()) {
+    init(with useCase: PlanetsService = StarWarsPlanetsService(dataProvider: NetworkAgent())) {
         self.useCase = useCase
     }
     
@@ -43,7 +44,6 @@ final class PlanentsViewModel: PlanetsDataProvider {
     }
     
     // MARK: - Private
-    
     private func fetchPlanets(_ urlToFetch: String? = nil) {
         self.state.accept(.loading)
         self
@@ -64,7 +64,6 @@ final class PlanentsViewModel: PlanetsDataProvider {
     
     private let disposeBag: DisposeBag = .init()
     private let useCase: PlanetsService
-    private let state: PublishRelay<State?> = .init()
     private var isFullyLoaded = false
 }
 

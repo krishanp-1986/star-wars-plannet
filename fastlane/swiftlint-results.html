@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<style type="text/css">
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 0.9rem;
+			}
+			
+			table {
+				border: 1px solid gray;
+				border-collapse: collapse;
+				-moz-box-shadow: 3px 3px 4px #AAA;
+				-webkit-box-shadow: 3px 3px 4px #AAA;
+				box-shadow: 3px 3px 4px #AAA;
+				vertical-align: top;
+				height: 64px;
+			}
+			
+			td, th {
+				border: 1px solid #D3D3D3;
+				padding: 5px 10px 5px 10px;
+			}
+			
+			th {
+				border-bottom: 1px solid gray;
+				background-color: rgba(41,52,92,0.313);
+			}
+			
+			.error, .warning {
+				text-align: center;
+			}
+			
+			.error {
+				background-color: #FF9D92;
+				color: #7F0800;
+			}
+			
+			.warning {
+				background-color: #FFF59E;
+				color: #7F7000;
+			}
+		</style>
+		
+		<title>SwiftLint Report</title>
+	</head>
+	<body>
+		<h1>SwiftLint Report</h1>
+		
+		<hr />
+		
+		<h2>Violations</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 60pt;">
+						<b>Serial No.</b>
+					</th>
+					<th style="width: 500pt;">
+						<b>File</b>
+					</th>
+					<th style="width: 60pt;">
+						<b>Location</b>
+					</th>
+					<th style="width: 60pt;">
+						<b>Severity</b>
+					</th>
+					<th style="width: 500pt;">
+						<b>Message</b>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: right;">1</td>
+					<td>StarWarsPlannet/Features/Planets/PlanetsViewController.swift</td>
+					<td style="text-align: center;">21:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 120 characters or less: currently 128 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">2</td>
+					<td>StarWarsPlannet/Features/Planets/PlanetsViewController.swift</td>
+					<td style="text-align: center;">24:9</td>
+					<td class="warning">Warning</td>
+					<td>Trailing closure syntax should be used whenever possible.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">3</td>
+					<td>StarWarsPlannet/Features/Planets/Planets.swift</td>
+					<td style="text-align: center;">18:151</td>
+					<td class="warning">Warning</td>
+					<td>Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">4</td>
+					<td>StarWarsPlannet/Features/Planets/Planets.swift</td>
+					<td style="text-align: center;">18:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 120 characters or less: currently 156 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">5</td>
+					<td>StarWarsPlannet/Features/Planets/UseCase/PlanetsUseCase.swift</td>
+					<td style="text-align: center;">16:5</td>
+					<td class="warning">Warning</td>
+					<td>Implicitly unwrapped optionals should be avoided when possible.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">6</td>
+					<td>StarWarsPlannet/Features/Planets/PlanetsDataProvider.swift</td>
+					<td style="text-align: center;">37:13</td>
+					<td class="warning">Warning</td>
+					<td>Trailing closure syntax should be used whenever possible.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">7</td>
+					<td>StarWarsPlannet/Service/Service.swift</td>
+					<td style="text-align: center;">11:5</td>
+					<td class="warning">Warning</td>
+					<td>Implicitly unwrapped optionals should be avoided when possible.</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br/>
+		
+		<h2>Summary</h2>
+		
+		<table>
+			<tbody>
+				<tr>
+					<td>Total files with violations</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Total warnings</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>Total errors</td>
+					<td>0</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<hr />
+		
+		<p>
+			Created with
+			<a href="https://github.com/realm/SwiftLint"><b>SwiftLint</b></a>
+			0.49.1 on 2022-10-23
+		</p>
+	</body>
+</html>

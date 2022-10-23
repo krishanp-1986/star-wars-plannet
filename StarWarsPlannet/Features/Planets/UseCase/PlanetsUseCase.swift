@@ -8,12 +8,12 @@
 import Foundation
 import RxSwift
 
-protocol PlanetsService {
+protocol PlanetsService: Service {
     func fetchPlanets(urlToFetch: String?) -> Single<PlanetsResponse>
 }
 
 struct StarWarsPlanetsService: PlanetsService {
-    let dataProvider: DataProvider = NetworkAgent()
+    var dataProvider: DataProvider!
     func fetchPlanets(urlToFetch: String?) -> Single<PlanetsResponse> {
         guard let request = EndPoint.loadPlanet(urlToFetch).request else {
             let error = NSError(
