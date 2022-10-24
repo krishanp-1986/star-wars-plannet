@@ -25,13 +25,15 @@ class PlanetTableViewCell: UITableViewCell {
         self.contentView.addSubview(nameLabel)
         self.contentView.addSubview(climateLabel)
         
+        let mediumSize = DesignSystem.shared.sizer.md
+        
         self.nameLabel.snp.makeConstraints {
-            $0.left.top.right.equalToSuperview().inset(16)
+            $0.left.top.right.equalToSuperview().inset(mediumSize)
         }
         
         self.climateLabel.snp.makeConstraints {
-            $0.left.bottom.right.equalToSuperview().inset(16)
-            $0.top.equalTo(self.nameLabel.snp.bottom).offset(8)
+            $0.left.bottom.right.equalToSuperview().inset(mediumSize)
+            $0.top.equalTo(self.nameLabel.snp.bottom).offset(DesignSystem.shared.sizer.sm)
         }
     }
     

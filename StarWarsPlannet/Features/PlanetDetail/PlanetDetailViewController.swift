@@ -35,7 +35,7 @@ class PlanetDetailViewController: BaseViewController<NSNull> {
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = 16
+        stackView.spacing = CGFloat(DesignSystem.shared.sizer.md)
         return stackView
     }()
     
