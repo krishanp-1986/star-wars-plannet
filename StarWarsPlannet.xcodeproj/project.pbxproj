@@ -1,0 +1,924 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F2C1624C9A67C49A181FE2B /* Pods_StarWarsPlannetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A341799F6274BC4408135DCA /* Pods_StarWarsPlannetTests.framework */; };
+		856FEAA3B96F2E5AB6DA35B1 /* Pods_StarWarsPlannet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCF88F2B38D805AA26A7A30 /* Pods_StarWarsPlannet.framework */; };
+		D92E8F542903BD20001C1504 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E8F532903BD20001C1504 /* Reusable.swift */; };
+		D92E8F562903BD90001C1504 /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E8F552903BD90001C1504 /* CellConfigurable.swift */; };
+		D92E8F582903BE0C001C1504 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E8F572903BE0C001C1504 /* TableViewAdapter.swift */; };
+		D92E8F5A2903E511001C1504 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E8F592903E511001C1504 /* Observable.swift */; };
+		D93FA2112902D58700A91B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2102902D58700A91B38 /* AppDelegate.swift */; };
+		D93FA2132902D58700A91B38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2122902D58700A91B38 /* SceneDelegate.swift */; };
+		D93FA21A2902D58800A91B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93FA2192902D58800A91B38 /* Assets.xcassets */; };
+		D93FA21D2902D58800A91B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93FA21B2902D58800A91B38 /* LaunchScreen.storyboard */; };
+		D93FA2442902D84100A91B38 /* Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2432902D84100A91B38 /* Planets.swift */; };
+		D93FA2472902D88A00A91B38 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2462902D88A00A91B38 /* BindableType.swift */; };
+		D93FA2492902D95400A91B38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2482902D95400A91B38 /* BaseViewController.swift */; };
+		D93FA24B2902DA0B00A91B38 /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA24A2902DA0B00A91B38 /* PlanetsViewController.swift */; };
+		D93FA24D2902DA3300A91B38 /* PlanetsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA24C2902DA3300A91B38 /* PlanetsDataProvider.swift */; };
+		D93FA2512902F6A000A91B38 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2502902F6A000A91B38 /* DataProvider.swift */; };
+		D93FA2532902F81A00A91B38 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2522902F81A00A91B38 /* NetworkAgent.swift */; };
+		D93FA2552902F94400A91B38 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2542902F94400A91B38 /* EndPoint.swift */; };
+		D93FA2582903056E00A91B38 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2572903056E00A91B38 /* UIViewController+Rx.swift */; };
+		D93FA25B2903094600A91B38 /* PlanetsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA25A2903094600A91B38 /* PlanetsUseCase.swift */; };
+		D93FA25D29030FD900A91B38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA25C29030FD900A91B38 /* Constants.swift */; };
+		D93FA260290314C200A91B38 /* PlanetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA25F290314C200A91B38 /* PlanetsResponse.swift */; };
+		D93FA2632903182200A91B38 /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */; };
+		D9DF236C29059C9C00C1ADF8 /* ObservableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF236B29059C9C00C1ADF8 /* ObservableTest.swift */; };
+		D9F99F092906395C00E88FF7 /* UIViewcontroller+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */; };
+		D9F99F1529063FED00E88FF7 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F0B29063FED00E88FF7 /* Styles.swift */; };
+		D9F99F1729063FED00E88FF7 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F0E29063FED00E88FF7 /* DesignSystem.swift */; };
+		D9F99F1A29063FED00E88FF7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F1229063FED00E88FF7 /* Fonts.swift */; };
+		D9F99F1B29063FED00E88FF7 /* Sizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F1329063FED00E88FF7 /* Sizers.swift */; };
+		D9F99F1C29063FED00E88FF7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F1429063FED00E88FF7 /* Colors.swift */; };
+		D9FABDF52904FBF2005DCA1B /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF42904FBF2005DCA1B /* ServiceFactory.swift */; };
+		D9FABDF72904FC16005DCA1B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF62904FC16005DCA1B /* Service.swift */; };
+		D9FABDFA290500D5005DCA1B /* JsonUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF9290500D5005DCA1B /* JsonUtilTest.swift */; };
+		D9FABDFC29050118005DCA1B /* TestResponse in Resources */ = {isa = PBXBuildFile; fileRef = D9FABDFB29050118005DCA1B /* TestResponse */; };
+		D9FABDFF29050243005DCA1B /* ServiceFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDFE29050243005DCA1B /* ServiceFactoryTest.swift */; };
+		D9FABE012905031A005DCA1B /* NetworkingAgentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE002905031A005DCA1B /* NetworkingAgentTest.swift */; };
+		D9FABE032905034A005DCA1B /* TestURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE022905034A005DCA1B /* TestURLProtocol.swift */; };
+		D9FABE052905106B005DCA1B /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE042905106B005DCA1B /* EndPointTest.swift */; };
+		D9FABE0A29051301005DCA1B /* PlanetsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE0929051301005DCA1B /* PlanetsUseCaseTest.swift */; };
+		D9FABE0C290513A6005DCA1B /* TestNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE0B290513A6005DCA1B /* TestNetworkAgent.swift */; };
+		D9FABE0E29051711005DCA1B /* PlanetsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE0D29051711005DCA1B /* PlanetsViewModelTest.swift */; };
+		D9FABE1029052EFF005DCA1B /* AppDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE0F29052EFF005DCA1B /* AppDelegateTest.swift */; };
+		D9FABE1229053221005DCA1B /* SceneDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE1129053221005DCA1B /* SceneDelegateTest.swift */; };
+		D9FABE14290532A3005DCA1B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE13290532A3005DCA1B /* main.swift */; };
+		D9FABE1629053407005DCA1B /* MockPlanetsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABE1529053407005DCA1B /* MockPlanetsUsecase.swift */; };
+		D9FCB34D290444D200B87BA8 /* MockNetworkingAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB34C290444D200B87BA8 /* MockNetworkingAgent.swift */; };
+		D9FCB3502904456600B87BA8 /* JsonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB34F2904456600B87BA8 /* JsonUtils.swift */; };
+		D9FCB3522904463A00B87BA8 /* MockResponse in Resources */ = {isa = PBXBuildFile; fileRef = D9FCB3512904463A00B87BA8 /* MockResponse */; };
+		D9FCB35429044B0F00B87BA8 /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB35329044B0F00B87BA8 /* UITableView+Rx.swift */; };
+		D9FCB35729045D0B00B87BA8 /* PlanetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB35629045D0B00B87BA8 /* PlanetDetail.swift */; };
+		D9FCB35929045DEE00B87BA8 /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCB35829045DEE00B87BA8 /* PlanetDetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D93FA2242902D58900A91B38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D93FA2052902D58700A91B38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D93FA20C2902D58700A91B38;
+			remoteInfo = StarWarsPlannet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B63798264A8AA8D6C1BD463 /* Pods-StarWarsPlannetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannetTests.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannetTests/Pods-StarWarsPlannetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		86E054CD78FE3334776D7842 /* Pods-StarWarsPlannet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannet.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannet/Pods-StarWarsPlannet.debug.xcconfig"; sourceTree = "<group>"; };
+		90CDAC493A369A0E9C9777F1 /* Pods-StarWarsPlannet-StarWarsPlannetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannet-StarWarsPlannetUITests.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannet-StarWarsPlannetUITests/Pods-StarWarsPlannet-StarWarsPlannetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		93D781A0CF6F6B70F2E4BA08 /* Pods_StarWarsPlannet_StarWarsPlannetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsPlannet_StarWarsPlannetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A341799F6274BC4408135DCA /* Pods_StarWarsPlannetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsPlannetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFCF88F2B38D805AA26A7A30 /* Pods_StarWarsPlannet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsPlannet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92E8F532903BD20001C1504 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		D92E8F552903BD90001C1504 /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
+		D92E8F572903BE0C001C1504 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		D92E8F592903E511001C1504 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D93FA20D2902D58700A91B38 /* StarWarsPlannet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsPlannet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93FA2102902D58700A91B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D93FA2122902D58700A91B38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D93FA2192902D58800A91B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D93FA21C2902D58800A91B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D93FA21E2902D58800A91B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93FA2232902D58900A91B38 /* StarWarsPlannetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsPlannetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93FA2432902D84100A91B38 /* Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planets.swift; sourceTree = "<group>"; };
+		D93FA2462902D88A00A91B38 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		D93FA2482902D95400A91B38 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D93FA24A2902DA0B00A91B38 /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
+		D93FA24C2902DA3300A91B38 /* PlanetsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsDataProvider.swift; sourceTree = "<group>"; };
+		D93FA2502902F6A000A91B38 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		D93FA2522902F81A00A91B38 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
+		D93FA2542902F94400A91B38 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		D93FA2572903056E00A91B38 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		D93FA25A2903094600A91B38 /* PlanetsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUseCase.swift; sourceTree = "<group>"; };
+		D93FA25C29030FD900A91B38 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D93FA25F290314C200A91B38 /* PlanetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsResponse.swift; sourceTree = "<group>"; };
+		D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
+		D9DF236B29059C9C00C1ADF8 /* ObservableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTest.swift; sourceTree = "<group>"; };
+		D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+Rx.swift"; sourceTree = "<group>"; };
+		D9F99F0B29063FED00E88FF7 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		D9F99F0E29063FED00E88FF7 /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		D9F99F1229063FED00E88FF7 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		D9F99F1329063FED00E88FF7 /* Sizers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sizers.swift; sourceTree = "<group>"; };
+		D9F99F1429063FED00E88FF7 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D9FABDF42904FBF2005DCA1B /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		D9FABDF62904FC16005DCA1B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		D9FABDF9290500D5005DCA1B /* JsonUtilTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtilTest.swift; sourceTree = "<group>"; };
+		D9FABDFB29050118005DCA1B /* TestResponse */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestResponse; sourceTree = "<group>"; };
+		D9FABDFE29050243005DCA1B /* ServiceFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactoryTest.swift; sourceTree = "<group>"; };
+		D9FABE002905031A005DCA1B /* NetworkingAgentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAgentTest.swift; sourceTree = "<group>"; };
+		D9FABE022905034A005DCA1B /* TestURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURLProtocol.swift; sourceTree = "<group>"; };
+		D9FABE042905106B005DCA1B /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
+		D9FABE0929051301005DCA1B /* PlanetsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsUseCaseTest.swift; sourceTree = "<group>"; };
+		D9FABE0B290513A6005DCA1B /* TestNetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkAgent.swift; sourceTree = "<group>"; };
+		D9FABE0D29051711005DCA1B /* PlanetsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModelTest.swift; sourceTree = "<group>"; };
+		D9FABE0F29052EFF005DCA1B /* AppDelegateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTest.swift; sourceTree = "<group>"; };
+		D9FABE1129053221005DCA1B /* SceneDelegateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTest.swift; sourceTree = "<group>"; };
+		D9FABE13290532A3005DCA1B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D9FABE1529053407005DCA1B /* MockPlanetsUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlanetsUsecase.swift; sourceTree = "<group>"; };
+		D9FCB34C290444D200B87BA8 /* MockNetworkingAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingAgent.swift; sourceTree = "<group>"; };
+		D9FCB34F2904456600B87BA8 /* JsonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtils.swift; sourceTree = "<group>"; };
+		D9FCB3512904463A00B87BA8 /* MockResponse */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MockResponse; sourceTree = "<group>"; };
+		D9FCB35329044B0F00B87BA8 /* UITableView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
+		D9FCB35629045D0B00B87BA8 /* PlanetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetail.swift; sourceTree = "<group>"; };
+		D9FCB35829045DEE00B87BA8 /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
+		DA3532D430137AA4D5BE4680 /* Pods-StarWarsPlannetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannetTests.release.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannetTests/Pods-StarWarsPlannetTests.release.xcconfig"; sourceTree = "<group>"; };
+		F37F208B4206BCBABC0CCA55 /* Pods-StarWarsPlannet-StarWarsPlannetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannet-StarWarsPlannetUITests.release.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannet-StarWarsPlannetUITests/Pods-StarWarsPlannet-StarWarsPlannetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA7751975E02ABC508E7AD7B /* Pods-StarWarsPlannet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPlannet.release.xcconfig"; path = "Target Support Files/Pods-StarWarsPlannet/Pods-StarWarsPlannet.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D93FA20A2902D58700A91B38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				856FEAA3B96F2E5AB6DA35B1 /* Pods_StarWarsPlannet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93FA2202902D58900A91B38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F2C1624C9A67C49A181FE2B /* Pods_StarWarsPlannetTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46FAC3EBDB57009F0CED1509 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFCF88F2B38D805AA26A7A30 /* Pods_StarWarsPlannet.framework */,
+				93D781A0CF6F6B70F2E4BA08 /* Pods_StarWarsPlannet_StarWarsPlannetUITests.framework */,
+				A341799F6274BC4408135DCA /* Pods_StarWarsPlannetTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D93FA2042902D58700A91B38 = {
+			isa = PBXGroup;
+			children = (
+				D93FA20F2902D58700A91B38 /* StarWarsPlannet */,
+				D93FA2262902D58900A91B38 /* StarWarsPlannetTests */,
+				D93FA20E2902D58700A91B38 /* Products */,
+				E15B3C5E07DF897DC21A9A11 /* Pods */,
+				46FAC3EBDB57009F0CED1509 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D93FA20E2902D58700A91B38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA20D2902D58700A91B38 /* StarWarsPlannet.app */,
+				D93FA2232902D58900A91B38 /* StarWarsPlannetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D93FA20F2902D58700A91B38 /* StarWarsPlannet */ = {
+			isa = PBXGroup;
+			children = (
+				D9F99F0A29063FED00E88FF7 /* DesignSystem */,
+				D9FCB34E2904455900B87BA8 /* Utils */,
+				D93FA2562903055A00A91B38 /* Extension */,
+				D93FA24F2902F69300A91B38 /* Service */,
+				D93FA2452902D86A00A91B38 /* Base */,
+				D93FA2412902D82000A91B38 /* Features */,
+				D93FA2102902D58700A91B38 /* AppDelegate.swift */,
+				D9FABE13290532A3005DCA1B /* main.swift */,
+				D93FA2122902D58700A91B38 /* SceneDelegate.swift */,
+				D93FA2192902D58800A91B38 /* Assets.xcassets */,
+				D93FA21B2902D58800A91B38 /* LaunchScreen.storyboard */,
+				D93FA21E2902D58800A91B38 /* Info.plist */,
+			);
+			path = StarWarsPlannet;
+			sourceTree = "<group>";
+		};
+		D93FA2262902D58900A91B38 /* StarWarsPlannetTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9DF236A29059C7700C1ADF8 /* Extension */,
+				D9FABE06290512C5005DCA1B /* Features */,
+				D9FABDFD29050230005DCA1B /* Service */,
+				D9FABDFB29050118005DCA1B /* TestResponse */,
+				D9FABDF8290500BB005DCA1B /* Utils */,
+				D9FABE0F29052EFF005DCA1B /* AppDelegateTest.swift */,
+				D9FABE1129053221005DCA1B /* SceneDelegateTest.swift */,
+			);
+			path = StarWarsPlannetTests;
+			sourceTree = "<group>";
+		};
+		D93FA2412902D82000A91B38 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D9FCB35529045CF900B87BA8 /* PlanetDetail */,
+				D93FA2422902D82E00A91B38 /* Planets */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D93FA2422902D82E00A91B38 /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA261290317FD00A91B38 /* Views */,
+				D93FA25E290314B200A91B38 /* Model */,
+				D93FA2592903092A00A91B38 /* UseCase */,
+				D93FA2432902D84100A91B38 /* Planets.swift */,
+				D93FA24A2902DA0B00A91B38 /* PlanetsViewController.swift */,
+				D93FA24C2902DA3300A91B38 /* PlanetsDataProvider.swift */,
+			);
+			path = Planets;
+			sourceTree = "<group>";
+		};
+		D93FA2452902D86A00A91B38 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA2462902D88A00A91B38 /* BindableType.swift */,
+				D93FA2482902D95400A91B38 /* BaseViewController.swift */,
+				D93FA25C29030FD900A91B38 /* Constants.swift */,
+				D92E8F532903BD20001C1504 /* Reusable.swift */,
+				D92E8F552903BD90001C1504 /* CellConfigurable.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D93FA24F2902F69300A91B38 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D9FCB3512904463A00B87BA8 /* MockResponse */,
+				D93FA2502902F6A000A91B38 /* DataProvider.swift */,
+				D93FA2522902F81A00A91B38 /* NetworkAgent.swift */,
+				D93FA2542902F94400A91B38 /* EndPoint.swift */,
+				D9FCB34C290444D200B87BA8 /* MockNetworkingAgent.swift */,
+				D9FABDF42904FBF2005DCA1B /* ServiceFactory.swift */,
+				D9FABDF62904FC16005DCA1B /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D93FA2562903055A00A91B38 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA2572903056E00A91B38 /* UIViewController+Rx.swift */,
+				D92E8F592903E511001C1504 /* Observable.swift */,
+				D9FCB35329044B0F00B87BA8 /* UITableView+Rx.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D93FA2592903092A00A91B38 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA25A2903094600A91B38 /* PlanetsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		D93FA25E290314B200A91B38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D93FA25F290314C200A91B38 /* PlanetsResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D93FA261290317FD00A91B38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D92E8F572903BE0C001C1504 /* TableViewAdapter.swift */,
+				D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9DF236A29059C7700C1ADF8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D9DF236B29059C9C00C1ADF8 /* ObservableTest.swift */,
+				D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D9F99F0A29063FED00E88FF7 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				D9F99F0B29063FED00E88FF7 /* Styles.swift */,
+				D9F99F0E29063FED00E88FF7 /* DesignSystem.swift */,
+				D9F99F1229063FED00E88FF7 /* Fonts.swift */,
+				D9F99F1329063FED00E88FF7 /* Sizers.swift */,
+				D9F99F1429063FED00E88FF7 /* Colors.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		D9FABDF8290500BB005DCA1B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9FABDF9290500D5005DCA1B /* JsonUtilTest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D9FABDFD29050230005DCA1B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D9FABDFE29050243005DCA1B /* ServiceFactoryTest.swift */,
+				D9FABE002905031A005DCA1B /* NetworkingAgentTest.swift */,
+				D9FABE022905034A005DCA1B /* TestURLProtocol.swift */,
+				D9FABE042905106B005DCA1B /* EndPointTest.swift */,
+				D9FABE0B290513A6005DCA1B /* TestNetworkAgent.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D9FABE06290512C5005DCA1B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D9FABE07290512E0005DCA1B /* Planets */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D9FABE07290512E0005DCA1B /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				D9FABE08290512EC005DCA1B /* Usecase */,
+				D9FABE0D29051711005DCA1B /* PlanetsViewModelTest.swift */,
+				D9FABE1529053407005DCA1B /* MockPlanetsUsecase.swift */,
+			);
+			path = Planets;
+			sourceTree = "<group>";
+		};
+		D9FABE08290512EC005DCA1B /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				D9FABE0929051301005DCA1B /* PlanetsUseCaseTest.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		D9FCB34E2904455900B87BA8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D9FCB34F2904456600B87BA8 /* JsonUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D9FCB35529045CF900B87BA8 /* PlanetDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D9FCB35629045D0B00B87BA8 /* PlanetDetail.swift */,
+				D9FCB35829045DEE00B87BA8 /* PlanetDetailViewController.swift */,
+			);
+			path = PlanetDetail;
+			sourceTree = "<group>";
+		};
+		E15B3C5E07DF897DC21A9A11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86E054CD78FE3334776D7842 /* Pods-StarWarsPlannet.debug.xcconfig */,
+				FA7751975E02ABC508E7AD7B /* Pods-StarWarsPlannet.release.xcconfig */,
+				90CDAC493A369A0E9C9777F1 /* Pods-StarWarsPlannet-StarWarsPlannetUITests.debug.xcconfig */,
+				F37F208B4206BCBABC0CCA55 /* Pods-StarWarsPlannet-StarWarsPlannetUITests.release.xcconfig */,
+				2B63798264A8AA8D6C1BD463 /* Pods-StarWarsPlannetTests.debug.xcconfig */,
+				DA3532D430137AA4D5BE4680 /* Pods-StarWarsPlannetTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D93FA20C2902D58700A91B38 /* StarWarsPlannet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D93FA2372902D58900A91B38 /* Build configuration list for PBXNativeTarget "StarWarsPlannet" */;
+			buildPhases = (
+				E13E412F561C0101363CED01 /* [CP] Check Pods Manifest.lock */,
+				D93FA24E2902E99200A91B38 /* Swiftlint */,
+				D93FA2092902D58700A91B38 /* Sources */,
+				D93FA20A2902D58700A91B38 /* Frameworks */,
+				D93FA20B2902D58700A91B38 /* Resources */,
+				33E4C580493B742A06690388 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarWarsPlannet;
+			productName = StarWarsPlannet;
+			productReference = D93FA20D2902D58700A91B38 /* StarWarsPlannet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D93FA2222902D58900A91B38 /* StarWarsPlannetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D93FA23A2902D58900A91B38 /* Build configuration list for PBXNativeTarget "StarWarsPlannetTests" */;
+			buildPhases = (
+				B29D0C5A6A94B289329803DF /* [CP] Check Pods Manifest.lock */,
+				D93FA21F2902D58900A91B38 /* Sources */,
+				D93FA2202902D58900A91B38 /* Frameworks */,
+				D93FA2212902D58900A91B38 /* Resources */,
+				1C83BFF0CCC1DD6305CA575F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D93FA2252902D58900A91B38 /* PBXTargetDependency */,
+			);
+			name = StarWarsPlannetTests;
+			productName = StarWarsPlannetTests;
+			productReference = D93FA2232902D58900A91B38 /* StarWarsPlannetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D93FA2052902D58700A91B38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D93FA20C2902D58700A91B38 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					D93FA2222902D58900A91B38 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D93FA20C2902D58700A91B38;
+					};
+				};
+			};
+			buildConfigurationList = D93FA2082902D58700A91B38 /* Build configuration list for PBXProject "StarWarsPlannet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D93FA2042902D58700A91B38;
+			productRefGroup = D93FA20E2902D58700A91B38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D93FA20C2902D58700A91B38 /* StarWarsPlannet */,
+				D93FA2222902D58900A91B38 /* StarWarsPlannetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D93FA20B2902D58700A91B38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9FCB3522904463A00B87BA8 /* MockResponse in Resources */,
+				D93FA21D2902D58800A91B38 /* LaunchScreen.storyboard in Resources */,
+				D93FA21A2902D58800A91B38 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93FA2212902D58900A91B38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9FABDFC29050118005DCA1B /* TestResponse in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C83BFF0CCC1DD6305CA575F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsPlannetTests/Pods-StarWarsPlannetTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsPlannetTests/Pods-StarWarsPlannetTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWarsPlannetTests/Pods-StarWarsPlannetTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33E4C580493B742A06690388 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsPlannet/Pods-StarWarsPlannet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsPlannet/Pods-StarWarsPlannet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWarsPlannet/Pods-StarWarsPlannet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B29D0C5A6A94B289329803DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsPlannetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D93FA24E2902E99200A91B38 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		E13E412F561C0101363CED01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsPlannet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D93FA2092902D58700A91B38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9FABDF52904FBF2005DCA1B /* ServiceFactory.swift in Sources */,
+				D9FABDF72904FC16005DCA1B /* Service.swift in Sources */,
+				D92E8F5A2903E511001C1504 /* Observable.swift in Sources */,
+				D9FCB34D290444D200B87BA8 /* MockNetworkingAgent.swift in Sources */,
+				D93FA260290314C200A91B38 /* PlanetsResponse.swift in Sources */,
+				D9F99F1729063FED00E88FF7 /* DesignSystem.swift in Sources */,
+				D9FCB3502904456600B87BA8 /* JsonUtils.swift in Sources */,
+				D93FA24D2902DA3300A91B38 /* PlanetsDataProvider.swift in Sources */,
+				D93FA2112902D58700A91B38 /* AppDelegate.swift in Sources */,
+				D93FA2552902F94400A91B38 /* EndPoint.swift in Sources */,
+				D93FA2512902F6A000A91B38 /* DataProvider.swift in Sources */,
+				D92E8F582903BE0C001C1504 /* TableViewAdapter.swift in Sources */,
+				D9FABE14290532A3005DCA1B /* main.swift in Sources */,
+				D93FA24B2902DA0B00A91B38 /* PlanetsViewController.swift in Sources */,
+				D9FCB35929045DEE00B87BA8 /* PlanetDetailViewController.swift in Sources */,
+				D93FA2132902D58700A91B38 /* SceneDelegate.swift in Sources */,
+				D9F99F1529063FED00E88FF7 /* Styles.swift in Sources */,
+				D9F99F1A29063FED00E88FF7 /* Fonts.swift in Sources */,
+				D93FA2442902D84100A91B38 /* Planets.swift in Sources */,
+				D93FA25D29030FD900A91B38 /* Constants.swift in Sources */,
+				D9FCB35429044B0F00B87BA8 /* UITableView+Rx.swift in Sources */,
+				D9F99F1B29063FED00E88FF7 /* Sizers.swift in Sources */,
+				D93FA2472902D88A00A91B38 /* BindableType.swift in Sources */,
+				D93FA2492902D95400A91B38 /* BaseViewController.swift in Sources */,
+				D93FA2582903056E00A91B38 /* UIViewController+Rx.swift in Sources */,
+				D9FCB35729045D0B00B87BA8 /* PlanetDetail.swift in Sources */,
+				D92E8F542903BD20001C1504 /* Reusable.swift in Sources */,
+				D93FA2532902F81A00A91B38 /* NetworkAgent.swift in Sources */,
+				D93FA25B2903094600A91B38 /* PlanetsUseCase.swift in Sources */,
+				D9F99F1C29063FED00E88FF7 /* Colors.swift in Sources */,
+				D92E8F562903BD90001C1504 /* CellConfigurable.swift in Sources */,
+				D93FA2632903182200A91B38 /* PlanetTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93FA21F2902D58900A91B38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9FABE1029052EFF005DCA1B /* AppDelegateTest.swift in Sources */,
+				D9DF236C29059C9C00C1ADF8 /* ObservableTest.swift in Sources */,
+				D9FABE1229053221005DCA1B /* SceneDelegateTest.swift in Sources */,
+				D9FABE0A29051301005DCA1B /* PlanetsUseCaseTest.swift in Sources */,
+				D9FABE0E29051711005DCA1B /* PlanetsViewModelTest.swift in Sources */,
+				D9FABE052905106B005DCA1B /* EndPointTest.swift in Sources */,
+				D9F99F092906395C00E88FF7 /* UIViewcontroller+Rx.swift in Sources */,
+				D9FABE0C290513A6005DCA1B /* TestNetworkAgent.swift in Sources */,
+				D9FABDFF29050243005DCA1B /* ServiceFactoryTest.swift in Sources */,
+				D9FABE032905034A005DCA1B /* TestURLProtocol.swift in Sources */,
+				D9FABE1629053407005DCA1B /* MockPlanetsUsecase.swift in Sources */,
+				D9FABDFA290500D5005DCA1B /* JsonUtilTest.swift in Sources */,
+				D9FABE012905031A005DCA1B /* NetworkingAgentTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D93FA2252902D58900A91B38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D93FA20C2902D58700A91B38 /* StarWarsPlannet */;
+			targetProxy = D93FA2242902D58900A91B38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D93FA21B2902D58800A91B38 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D93FA21C2902D58800A91B38 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D93FA2352902D58900A91B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D93FA2362902D58900A91B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D93FA2382902D58900A91B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86E054CD78FE3334776D7842 /* Pods-StarWarsPlannet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarWarsPlannet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishan.syscolabs.starwars.StarWarsPlannet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D93FA2392902D58900A91B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA7751975E02ABC508E7AD7B /* Pods-StarWarsPlannet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarWarsPlannet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishan.syscolabs.starwars.StarWarsPlannet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D93FA23B2902D58900A91B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B63798264A8AA8D6C1BD463 /* Pods-StarWarsPlannetTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishan.syscolabs.starwars.StarWarsPlannetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarWarsPlannet.app/StarWarsPlannet";
+			};
+			name = Debug;
+		};
+		D93FA23C2902D58900A91B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA3532D430137AA4D5BE4680 /* Pods-StarWarsPlannetTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.krishan.syscolabs.starwars.StarWarsPlannetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarWarsPlannet.app/StarWarsPlannet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D93FA2082902D58700A91B38 /* Build configuration list for PBXProject "StarWarsPlannet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93FA2352902D58900A91B38 /* Debug */,
+				D93FA2362902D58900A91B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D93FA2372902D58900A91B38 /* Build configuration list for PBXNativeTarget "StarWarsPlannet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93FA2382902D58900A91B38 /* Debug */,
+				D93FA2392902D58900A91B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D93FA23A2902D58900A91B38 /* Build configuration list for PBXNativeTarget "StarWarsPlannetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93FA23B2902D58900A91B38 /* Debug */,
+				D93FA23C2902D58900A91B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D93FA2052902D58700A91B38 /* Project object */;
+}

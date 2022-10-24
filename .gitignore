@@ -1,0 +1,28 @@
+### Xcode ###
+build
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+
+
+### Objective-C ###
+# OS X
+.DS_Store
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+xcuserdata
+*.xccheckout
+*.xcworkspacedata
+*IDEWorkspaceChecks.plist
+DerivedData
+*./derivedData
+
+
+# CocoaPods
+**/Pods
+**/reports
+README.md
+report.xml
