@@ -32,6 +32,11 @@
 		D93FA2632903182200A91B38 /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */; };
 		D9DF236C29059C9C00C1ADF8 /* ObservableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF236B29059C9C00C1ADF8 /* ObservableTest.swift */; };
 		D9F99F092906395C00E88FF7 /* UIViewcontroller+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */; };
+		D9F99F1529063FED00E88FF7 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F0B29063FED00E88FF7 /* Styles.swift */; };
+		D9F99F1729063FED00E88FF7 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F0E29063FED00E88FF7 /* DesignSystem.swift */; };
+		D9F99F1A29063FED00E88FF7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F1229063FED00E88FF7 /* Fonts.swift */; };
+		D9F99F1B29063FED00E88FF7 /* Sizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F1329063FED00E88FF7 /* Sizers.swift */; };
+		D9F99F1C29063FED00E88FF7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F1429063FED00E88FF7 /* Colors.swift */; };
 		D9FABDF52904FBF2005DCA1B /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF42904FBF2005DCA1B /* ServiceFactory.swift */; };
 		D9FABDF72904FC16005DCA1B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF62904FC16005DCA1B /* Service.swift */; };
 		D9FABDFA290500D5005DCA1B /* JsonUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF9290500D5005DCA1B /* JsonUtilTest.swift */; };
@@ -98,6 +103,11 @@
 		D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
 		D9DF236B29059C9C00C1ADF8 /* ObservableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTest.swift; sourceTree = "<group>"; };
 		D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+Rx.swift"; sourceTree = "<group>"; };
+		D9F99F0B29063FED00E88FF7 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		D9F99F0E29063FED00E88FF7 /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		D9F99F1229063FED00E88FF7 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		D9F99F1329063FED00E88FF7 /* Sizers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sizers.swift; sourceTree = "<group>"; };
+		D9F99F1429063FED00E88FF7 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D9FABDF42904FBF2005DCA1B /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		D9FABDF62904FC16005DCA1B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D9FABDF9290500D5005DCA1B /* JsonUtilTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtilTest.swift; sourceTree = "<group>"; };
@@ -177,6 +187,7 @@
 		D93FA20F2902D58700A91B38 /* StarWarsPlannet */ = {
 			isa = PBXGroup;
 			children = (
+				D9F99F0A29063FED00E88FF7 /* DesignSystem */,
 				D9FCB34E2904455900B87BA8 /* Utils */,
 				D93FA2562903055A00A91B38 /* Extension */,
 				D93FA24F2902F69300A91B38 /* Service */,
@@ -296,6 +307,18 @@
 				D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D9F99F0A29063FED00E88FF7 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				D9F99F0B29063FED00E88FF7 /* Styles.swift */,
+				D9F99F0E29063FED00E88FF7 /* DesignSystem.swift */,
+				D9F99F1229063FED00E88FF7 /* Fonts.swift */,
+				D9F99F1329063FED00E88FF7 /* Sizers.swift */,
+				D9F99F1429063FED00E88FF7 /* Colors.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		D9FABDF8290500BB005DCA1B /* Utils */ = {
@@ -585,6 +608,7 @@
 				D92E8F5A2903E511001C1504 /* Observable.swift in Sources */,
 				D9FCB34D290444D200B87BA8 /* MockNetworkingAgent.swift in Sources */,
 				D93FA260290314C200A91B38 /* PlanetsResponse.swift in Sources */,
+				D9F99F1729063FED00E88FF7 /* DesignSystem.swift in Sources */,
 				D9FCB3502904456600B87BA8 /* JsonUtils.swift in Sources */,
 				D93FA24D2902DA3300A91B38 /* PlanetsDataProvider.swift in Sources */,
 				D93FA2112902D58700A91B38 /* AppDelegate.swift in Sources */,
@@ -595,9 +619,12 @@
 				D93FA24B2902DA0B00A91B38 /* PlanetsViewController.swift in Sources */,
 				D9FCB35929045DEE00B87BA8 /* PlanetDetailViewController.swift in Sources */,
 				D93FA2132902D58700A91B38 /* SceneDelegate.swift in Sources */,
+				D9F99F1529063FED00E88FF7 /* Styles.swift in Sources */,
+				D9F99F1A29063FED00E88FF7 /* Fonts.swift in Sources */,
 				D93FA2442902D84100A91B38 /* Planets.swift in Sources */,
 				D93FA25D29030FD900A91B38 /* Constants.swift in Sources */,
 				D9FCB35429044B0F00B87BA8 /* UITableView+Rx.swift in Sources */,
+				D9F99F1B29063FED00E88FF7 /* Sizers.swift in Sources */,
 				D93FA2472902D88A00A91B38 /* BindableType.swift in Sources */,
 				D93FA2492902D95400A91B38 /* BaseViewController.swift in Sources */,
 				D93FA2582903056E00A91B38 /* UIViewController+Rx.swift in Sources */,
@@ -605,6 +632,7 @@
 				D92E8F542903BD20001C1504 /* Reusable.swift in Sources */,
 				D93FA2532902F81A00A91B38 /* NetworkAgent.swift in Sources */,
 				D93FA25B2903094600A91B38 /* PlanetsUseCase.swift in Sources */,
+				D9F99F1C29063FED00E88FF7 /* Colors.swift in Sources */,
 				D92E8F562903BD90001C1504 /* CellConfigurable.swift in Sources */,
 				D93FA2632903182200A91B38 /* PlanetTableViewCell.swift in Sources */,
 			);

@@ -14,7 +14,7 @@ class BaseViewController<VM>: UIViewController, BindableType {
     
     override func loadView() {
         super.loadView()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = DesignSystem.shared.colors.backgroundPrimary
     }
     
     func bind() {

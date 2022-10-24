@@ -47,6 +47,7 @@ final class PlanetsTableViewAdapter: NSObject {
                 withIdentifier: PlanetTableViewCell.reuseIdentifier,
                 for: indexPath) as? PlanetTableViewCell
             cell?.configure(with: viewModel)
+            cell?.selectionStyle = .none
             return cell
         }
         return dataSource

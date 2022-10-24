@@ -48,7 +48,7 @@ class PlanetsViewController: BaseViewController<PlanetsDataProvider> {
     
     private func reloadTableView() {
         self.planetsTableView.reloadData()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
             if self?.planetsTableView.isLastCellVisible == true {
                 self?.tableViewUpdated.accept(())
             }
@@ -67,6 +67,7 @@ class PlanetsViewController: BaseViewController<PlanetsDataProvider> {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.registerCell(PlanetTableViewCell.self)
+        tableView.backgroundColor = .clear
         return tableView
     }()
     

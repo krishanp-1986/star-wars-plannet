@@ -12,6 +12,8 @@ class PlanetTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         buildUI()
+        self.contentView.backgroundColor = .clear
+        self.backgroundColor = .clear
     }
     
     required init?(coder: NSCoder) {
@@ -37,6 +39,7 @@ class PlanetTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .systemBlue
+        DesignSystem.shared.styles.headerLabel(label)
         return label
     }()
     
@@ -44,6 +47,7 @@ class PlanetTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .systemGray
+        DesignSystem.shared.styles.description(label)
         return label
     }()
 }

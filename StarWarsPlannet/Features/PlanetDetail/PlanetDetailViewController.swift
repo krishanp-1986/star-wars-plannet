@@ -44,6 +44,7 @@ class PlanetDetailViewController: BaseViewController<NSNull> {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .systemBlue
         label.textAlignment = .center
+        DesignSystem.shared.styles.headerLabel(label)
         return label
     }()
     
@@ -52,6 +53,7 @@ class PlanetDetailViewController: BaseViewController<NSNull> {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .systemGray
         label.textAlignment = .center
+        DesignSystem.shared.styles.description(label)
         return label
     }()
     
@@ -60,6 +62,7 @@ class PlanetDetailViewController: BaseViewController<NSNull> {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .systemGray
         label.textAlignment = .center
+        DesignSystem.shared.styles.description(label)
         return label
     }()
 }
