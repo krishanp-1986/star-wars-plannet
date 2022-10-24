@@ -31,6 +31,7 @@
 		D93FA260290314C200A91B38 /* PlanetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA25F290314C200A91B38 /* PlanetsResponse.swift */; };
 		D93FA2632903182200A91B38 /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */; };
 		D9DF236C29059C9C00C1ADF8 /* ObservableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DF236B29059C9C00C1ADF8 /* ObservableTest.swift */; };
+		D9F99F092906395C00E88FF7 /* UIViewcontroller+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */; };
 		D9FABDF52904FBF2005DCA1B /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF42904FBF2005DCA1B /* ServiceFactory.swift */; };
 		D9FABDF72904FC16005DCA1B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF62904FC16005DCA1B /* Service.swift */; };
 		D9FABDFA290500D5005DCA1B /* JsonUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FABDF9290500D5005DCA1B /* JsonUtilTest.swift */; };
@@ -96,6 +97,7 @@
 		D93FA25F290314C200A91B38 /* PlanetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsResponse.swift; sourceTree = "<group>"; };
 		D93FA2622903182200A91B38 /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
 		D9DF236B29059C9C00C1ADF8 /* ObservableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTest.swift; sourceTree = "<group>"; };
+		D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+Rx.swift"; sourceTree = "<group>"; };
 		D9FABDF42904FBF2005DCA1B /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		D9FABDF62904FC16005DCA1B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		D9FABDF9290500D5005DCA1B /* JsonUtilTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtilTest.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				D9DF236B29059C9C00C1ADF8 /* ObservableTest.swift */,
+				D9F99F082906395C00E88FF7 /* UIViewcontroller+Rx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				D9FABE0A29051301005DCA1B /* PlanetsUseCaseTest.swift in Sources */,
 				D9FABE0E29051711005DCA1B /* PlanetsViewModelTest.swift in Sources */,
 				D9FABE052905106B005DCA1B /* EndPointTest.swift in Sources */,
+				D9F99F092906395C00E88FF7 /* UIViewcontroller+Rx.swift in Sources */,
 				D9FABE0C290513A6005DCA1B /* TestNetworkAgent.swift in Sources */,
 				D9FABDFF29050243005DCA1B /* ServiceFactoryTest.swift in Sources */,
 				D9FABE032905034A005DCA1B /* TestURLProtocol.swift in Sources */,

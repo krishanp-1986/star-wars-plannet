@@ -19,13 +19,18 @@ class PlanetsViewModelTest: QuickSpec {
         describe("Planets viewmodel") {
             let disposeBag = DisposeBag()
             var scheduler: TestScheduler!
+            var useCase: MockPlanetUsecase!
+            var mockAgent: TestNetworkAgent!
             beforeEach {
                 scheduler = TestScheduler(initialClock: 0)
+                mockAgent = TestNetworkAgent()
+                mockAgent.mockFileName = "emptyplanets"
+                useCase = MockPlanetUsecase(with: mockAgent)
             }
             
             context("binding") {
                 it("should return correct binding") {
-                    let sut = PlanentsViewModel(with: MockPlanetUsecase())
+                    let sut = PlanentsViewModel(with: useCase)
                     let outPut = sut.bind(input: .init(didLoad: .just(()),
                                                        willDisplayLastCell: .just(())))
                     
@@ -55,8 +60,8 @@ class PlanetsViewModelTest: QuickSpec {
             }
             
             context("When view Did load") {
-                it("should return correct binding") {
-                    let sut = PlanentsViewModel(with: MockPlanetUsecase())
+                it("should return loading state") {
+                    let sut = PlanentsViewModel(with: useCase)
                     let input = PlanentsViewModel.Input(didLoad: scheduler.createHotObservable([
                         .next(10, ())
                     ]).asObservable(),
@@ -73,9 +78,9 @@ class PlanetsViewModelTest: QuickSpec {
                     
                 }
                 
-                it("should fetch data for planets") {
+                it("should return loaded state when fetching completed") {
                     let apiExpecation = self.expectation(description: "apifetch")
-                    let sut = PlanentsViewModel(with: MockPlanetUsecase())
+                    let sut = PlanentsViewModel(with: useCase)
                     let states = scheduler.createObserver(PlanentsViewModel.State?.self)
                     
                     let input = PlanentsViewModel.Input(didLoad: scheduler.createColdObservable([.next(10, ())]).asObservable(),
@@ -98,11 +103,41 @@ class PlanetsViewModelTest: QuickSpec {
                         expect(states.events) == [.next(10, PlanentsViewModel.State.loading),
                                                   .next(10, PlanentsViewModel.State.loaded([])) ]
                 }
+                
+                it("should return failed state when fetching failed") {
+                    let apiExpecation = self.expectation(description: "apifetch")
+                    
+                    mockAgent.mockFileName = "invalid"
+                    
+                    let sut = PlanentsViewModel(with: useCase)
+                    let states = scheduler.createObserver(PlanentsViewModel.State?.self)
+                    
+                    let input = PlanentsViewModel.Input(didLoad: scheduler.createColdObservable([.next(10, ())]).asObservable(),
+                                                        willDisplayLastCell: .just(()))
+                    let output = sut.bind(input: input)
+                    
+                    output.do(onNext: { statee in
+                        switch statee {
+                        case .failed:
+                            apiExpecation.fulfill()
+                        default:break
+                        }
+                    })
+                    .bind(to: states)
+                        .disposed(by: disposeBag)
+                        scheduler.start()
+                        
+                        
+                        self.wait(for: [apiExpecation], timeout: 1)
+                        expect(states.events) == [.next(10, PlanentsViewModel.State.loading),
+                                                  .next(10, PlanentsViewModel.State.failed(ServiceError.inValidData))]
+                }
+
             }
             
             context("When view last cell displayed") {
-                it("for nextUrl should start fetching next") {
-                    let sut = PlanentsViewModel(with: MockPlanetUsecase())
+                it("before fetching next url should update state to loading") {
+                    let sut = PlanentsViewModel(with: useCase)
                     sut.nextUrl = "page=4"
                     let input = PlanentsViewModel.Input(didLoad: scheduler.createHotObservable([
                         .next(10, ())
@@ -125,7 +160,7 @@ class PlanetsViewModelTest: QuickSpec {
                 }
                 
                 it("when nextURL is nil should not fetch more planets") {
-                    let sut = PlanentsViewModel(with: MockPlanetUsecase())
+                    let sut = PlanentsViewModel(with: useCase)
                     let input = PlanentsViewModel.Input(didLoad: scheduler.createHotObservable([
                         .next(10, ())
                     ]).asObservable(),
@@ -141,6 +176,35 @@ class PlanetsViewModelTest: QuickSpec {
                     scheduler.start()
                     
                     expect(states.events) == [.next(10, PlanentsViewModel.State.loading)]
+                }
+                
+                it("when nextURL fetched should updated state to fetched") {
+                    let apiExpecation = self.expectation(description: "apiFetchNext")
+                    let sut = PlanentsViewModel(with: useCase)
+                    sut.nextUrl = "page=4"
+                    let input = PlanentsViewModel.Input(didLoad: scheduler.createHotObservable([
+                        .next(10, ())
+                    ]).asObservable(),
+                                                        willDisplayLastCell: scheduler.createHotObservable([
+                                                            .next(20, ())
+                                                        ]).asObservable())
+                    
+                    let output = sut.bind(input: input)
+                    let states = scheduler.createObserver(PlanentsViewModel.State?.self)
+                    scheduler.advanceTo(20)
+                    output.do(onNext: { statee in
+                        switch statee {
+                        case .nextLoaded:
+                            apiExpecation.fulfill()
+                        default:break
+                        }
+                    })
+                    .bind(to: states)
+                        .disposed(by: disposeBag)
+                        scheduler.start()
+                        
+                    self.wait(for: [apiExpecation], timeout: 1)
+                        expect(states.events.last) == .next(20, PlanentsViewModel.State.nextLoaded([]))
                 }
             }
         }

@@ -12,10 +12,9 @@ import RxSwift
 
 struct MockPlanetUsecase: PlanetsService {
     func fetchPlanets(urlToFetch: String?) -> Single<PlanetsResponse> {
-        (dataProvider as? TestNetworkAgent)?.mockFileName = "emptyplanets"
         return dataProvider.execute(.init(url: URL(string: "https://swapi.dev/api/emptyplanets")!))
     }
     
-    var dataProvider: DataProvider! = TestNetworkAgent()
+    var dataProvider: DataProvider!
 }
 

@@ -17,7 +17,7 @@ class PlanetsViewController: BaseViewController<PlanetsDataProvider> {
     }
     override func bind() {
         let input = PlanentsViewModel.Input(
-            didLoad: self.rx.viewDidLoad.asObservable(),
+            didLoad: self.rx.viewDidLoaded.asObservable(),
             willDisplayLastCell: Observable.merge(self.planetsTableView.rx.willDisplayLastCell, tableViewUpdated.asObservable())
         )
         let outPut = self.viewModel?.bind(input: input)
